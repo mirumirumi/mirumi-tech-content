@@ -7,7 +7,7 @@ tags : [Vue.js, AWS]
 
 技術要素は
 
-- Vue3 (Vue Router、Vuex)
+- Vue3 (Vue Router、Vuex) 
 - AWS SAM (一部Terraform)
 - GitHub Actions
 
