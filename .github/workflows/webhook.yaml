@@ -28,4 +28,6 @@ jobs:
         run: |
           curl -X POST -H "Content-Type: application/json" -H "X-Api-Key: ${{ secrets.API_KEY_DEV }}" -d "${{ steps.changed-files.outputs.all_changed_files }}" https://ytztx20yia.execute-api.ap-northeast-1.amazonaws.com/mirumitech-dev-apis/insert-content-webhook
 
-      # - if: ${{ github.ref == 'refs/heads/release/prd' }}
+      - if: ${{ github.ref == 'refs/heads/release/prd' }}
+        run: |
+          curl -X POST -H "Content-Type: application/json" -H "X-Api-Key: ${{ secrets.API_KEY_PRD }}" -d "${{ steps.changed-files.outputs.all_changed_files }}" https://s9ubhi41m7.execute-api.ap-northeast-1.amazonaws.com/mirumitech-prd-apis/insert-content-webhook
