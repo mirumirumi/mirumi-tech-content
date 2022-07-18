@@ -22,7 +22,7 @@ Lambda 同士で共通の処理を切り出せる [Lambda Layers](https://docs.a
 
 図にするとこう。
 
-![lambda-layers-demerit-policy](../images/lambda-layers-demerit-policy.png) 
+![lambda-layers-demerit-policy](../images/lambda-layers-demerit-policy.png)
 *この図だけだとあまり伝わらない気がするのですが、実際はスタックで分かれていたりするのでもっと大変な感じでした。*
 
 レイヤーは Lambda と名前こそつくものの、実態としてはインポートするモジュールのようなものに過ぎません。つまりそれを行使する Lambda Function に実際のパラメータを付与しないといけなくなり、SAM のテンプレートもだいぶめちゃくちゃなことになります。
@@ -62,11 +62,11 @@ Lambda 同士で共通の処理を切り出せる [Lambda Layers](https://docs.a
 
 外部モジュールを使用するとき、各デプロイパッケージ内の requirements.txt に書くのではなくインポート用だけのレイヤーを作るといいよ、という記事を書きました。これは AWS も推奨しているソリューションのようです。
 
-- [Lambda(SAM) の外部モジュールインストールには Layer の requirements を使おう](https://mirumi.me/tech/153/)
+[https://mirumi.tech/lambda-layers-import]
 
-## さらに追記
+## （さらに追記）
 
-最近は複数 Functions にまたがる定数の定義やいわゆる util/ に置くようなものをレイヤー化することで上手に使えるようになりました。
+最近は複数 Functions にまたがる定数の定義やいわゆる `utils/` に置くようなものをレイヤー化することで上手に使えるようになりました。
 
 このサイトのリポジトリでも使っているのでよければご覧ください。
 
