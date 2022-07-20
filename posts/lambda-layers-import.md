@@ -15,25 +15,25 @@ root
 │  README.md
 │  template.yaml
 │
-├─events
+├─ events
 │  event.json
 │
-└─hello_world
+└─ hello_world
     │  __init__.py
     │  app.py
     │  requirements.txt  # --> ここに依存モジュールを書きがち
     │
-    └─tests
+    └─ tests
         │  __init__.py
         │  requirements.txt
         |
-        ├─integration
+        ├─ integration
         |  __init__.py
         |  test_api_gateway.py
         |  
-        └─unit
-            __init_.py
-            test_handler.py
+        └─ unit
+           __init_.py
+           test_handler.py
 ```
 
 Lambda 関数のロジックとなるソースファイルが 1 つしかないのでつい hello_world 内の requirements.txt を使ってしまいがちです。
