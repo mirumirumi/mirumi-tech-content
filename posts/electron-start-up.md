@@ -7,7 +7,7 @@ Electron の豊富な設定項目と丁寧なリファレンスには絶対に�
 
 実際にはこれが該当します。
 
-https://www.electronjs.org/ja/docs/latest/api/app#appsetloginitemsettingssettings-macos-windows
+[https://www.electronjs.org/ja/docs/latest/api/app#appsetloginitemsettingssettings-macos-windows]
 
 メインプロセスモジュールの `app` が持つメソッドとして `setLoginItemSettings()` があります。
 
@@ -25,7 +25,7 @@ app.setLoginItemSettings({
 
 これには `getLoginItemSettings` を使います。そのままですね。
 
-https://www.electronjs.org/ja/docs/latest/api/app#appgetloginitemsettingsoptions-macos-windows
+[https://www.electronjs.org/ja/docs/latest/api/app#appgetloginitemsettingsoptions-macos-windows]
 
 同じく `openAtLogin` から真偽値が取得できるのでこれを使いましょう。
 
