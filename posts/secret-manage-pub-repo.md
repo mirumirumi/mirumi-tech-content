@@ -189,7 +189,7 @@ brew install gpg
 
 Windows の場合は公式サイトからインストーラーを入手できます。
 
-https://www.gnupg.org
+[https://www.gnupg.org]
 
 最後に WSL 。僕は普段の個人開発環境が WSL2 なのでそこでインストール作業をやったはずなのですが、なにをどうしたか記憶が怪しく…。たぶん `apt install gpg` でよい、のかな…。
 
