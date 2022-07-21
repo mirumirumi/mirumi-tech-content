@@ -3,6 +3,12 @@ title: 【.NET】C# や VB で使う全コントロール一覧(サンプル画�
 tags : [.NET, C#, VB, Cheat Sheet, Windows Forms]
 ---
 
+<style>
+p img {
+    width: 480px;
+}
+</style>
+
 C# や VB で Windows 用デスクトップアプリケーションを作るときに使う「コントロール」の画像付き一覧が意外にもなさそうだったので自作してまとめてみました。
 
 間違いなどありましたらページ上部にある GitHub リンクから修正リクエストをお願いいたします。  
