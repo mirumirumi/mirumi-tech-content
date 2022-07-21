@@ -1,5 +1,5 @@
 ---
-title: "WSL2 の CentOS で npm install 中に make: g++: Command not found"
+title: WSL2 の CentOS で npm install 中に make: g++: Command not found
 tags : [WSL2]
 ---
 
