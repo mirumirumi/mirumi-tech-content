@@ -20,19 +20,19 @@ tags : [Nuxt 3, AWS, SAM, Terraform]
 
 クライアント（Nuxt 3 側）：
 
-https://github.com/mirumirumi/mirumi-tech-frontend
+[https://github.com/mirumirumi/mirumi-tech-frontend]
 
 サーバー側：
 
-https://github.com/mirumirumi/mirumi-tech-backend
+[https://github.com/mirumirumi/mirumi-tech-backend]
 
 コンテンツ管理（ `.md` 状態での記事の格納）：
 
-https://github.com/mirumirumi/mirumi-tech-content
+[https://github.com/mirumirumi/mirumi-tech-content]
 
 特定のアプリケーションに限定されない共通インフラ類の管理：
 
-https://github.com/mirumirumi/aws-common-infrastructures
+[https://github.com/mirumirumi/aws-common-infrastructures]
 
 継続的に自分が自分のブログで記事を書き続けていくためには徹底的な「仕組み化 for me」が必要だと感じ、まずは
 
