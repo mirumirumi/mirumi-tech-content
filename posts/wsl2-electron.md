@@ -1,6 +1,6 @@
 ---
-title: WSL2 Ubuntu で Electron 起動時に共有ライブラリがないとか色々怒られる
-tags : [WSL2, Electron]
+title: WSL 2 の Ubuntu で Electron 起動時に共有ライブラリがないとか色々怒られる
+tags : [WSL 2, Electron]
 ---
 どうやら Linux としてもともと共有されていることが前提らしいライブラリを `/node_modules/electron/dist/electron` が多く必要としているらしく、それが OS によっては全然なかったりするらしい。
 

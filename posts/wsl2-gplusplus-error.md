@@ -1,6 +1,6 @@
 ---
-title: WSL2 の CentOS で npm install 中に make: g++: Command not found
-tags : [WSL2]
+title: WSL 2 の CentOS で npm install 中に make: g++: Command not found
+tags : [WSL 2]
 ---
 
 標準で開発ツール類が入っていないことが問題のよう。
