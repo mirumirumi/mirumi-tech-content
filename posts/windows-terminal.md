@@ -163,7 +163,7 @@ Mac の有名ターミナル [iTerm 2](https://iterm2.com) はもとより、標
 
 こうやって普通の `curl` コマンドを送信したあと（たまたま `curl` は自分の環境で再現性があることを知っている）、
 
-そのまま<span class="key">↑</span>キーを 2　回押すと、
+そのまま<span class="key">↑</span>キーを 2 回押すと、
 
 ![windows-terminal-command-2](../images/windows-terminal-command-2.png)
 
@@ -182,5 +182,6 @@ Mac の有名ターミナル [iTerm 2](https://iterm2.com) はもとより、標
 自分の最近のソフト選びの趣向が「ネイティブよりなものを選ぶ」になってきたのもあって、Windows 純正 UI （正確には WinUI と呼ばれてきているもの）が採用されている Windows Terminal もデザイン含めて気に入っています。Windows 11 からウィンドウが角丸になったのも非常によい効果を生んでいると思います。
 
 ![windows-terminal-command-2](../images/windows-terminal-window.png)
+*実は角丸に加えて box-shadow 的なものも付加されていて、UI の全体的な質感は Windows 11 で本当に向上しました。*
 
 致命的な不具合もほぼなくなってきたこともあり、今後はプラス方向にしかいかないくらいに思っています。よければみなさんもぜひどうぞ。
