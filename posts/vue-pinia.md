@@ -102,7 +102,7 @@ export const useStore = defineStore("counter", {
 
 コンポーネント側です。
 
-```html
+```js
 <script setup lang="ts">
 import { useStore } from "@/store/store"
 
