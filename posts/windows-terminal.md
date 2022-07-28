@@ -163,7 +163,7 @@ Mac の有名ターミナル [iTerm 2](https://iterm2.com) はもとより、標
 
 こうやって普通の `curl` コマンドを送信したあと（たまたま `curl` は自分の環境で再現性があることを知っている）、
 
-そのまま<span class="key">↑</span>キーを 2 回押すと、
+そのまま<span class="keyboard-key">↑</span>キーを 2 回押すと、
 
 ![windows-terminal-command-2](../images/windows-terminal-command-2.png)
 
