@@ -7,15 +7,15 @@ Python で辞書オブジェクトを扱うとき、ある辞書の「キーの�
 
 ```ts
 interface User {
-  id: string
   name: string
   age: number
+  address: string
 }
 
 type User = {
-  id: string
   name: string
   age: number
+  address: string
 }
 ```
 
@@ -57,9 +57,9 @@ PyPl の [このページ](https://pypi.org/project/typing-extensions/) を見�
 
 ```python
 class User(TypedDict):
-  id: str
   name: str
   age: int
+  address: str
 ```
 
 これはもちろん普段のプリミティブな型やクラスと同様の型アノテーションとして使用することができ、例えば引数の受け渡し時などに効果を発揮します。
@@ -73,9 +73,9 @@ def logIn(user: User) -> None:
 
 ```python
 class User(TypedDict, total=False):
-  id: str
   name: str
   age: int
+  address: str
 ```
 
 ただしご想像の通り、特定のキーだけを Optional にする方法は（今のところ僕は）知りません。あったら教えてください。
@@ -91,12 +91,12 @@ Python 3.7 以上であるならば `dataclass` というものを使うこと�
 ```python
 @dataclass
 class User:
-  id: str
   name: str
   age: int
+  address: str
 
-print(User("id0001", "mirumi", 3))
-print(User(id="id0001", name="mirumi", age=3))
+print(User("mirumi", 3, "Mofu"))
+print(User(name="mirumi", age=3, address="Mofu"))
 ```
 
 常用したことがないのでこれについては終わりにしますが、「似たようなものがある」という情報として残しておくことにします。
@@ -109,7 +109,7 @@ print(User(id="id0001", name="mirumi", age=3))
 from typing import NamedTuple
 
 class User(NamedTuple):
-  id: str
   name: str
   age: int
+  address: str
 ```
