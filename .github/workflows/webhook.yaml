@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 2  # diff between this and latest
+          fetch-depth: 0
 
       - name: get changed files
         id: changed-files
