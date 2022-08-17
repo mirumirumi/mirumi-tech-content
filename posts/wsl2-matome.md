@@ -7,7 +7,7 @@ tags : [WSL 2, Windows]
 
 途中で Windows 11 が WSL 2 をより標準に取り込もうとするアップデートがあったり、ここ最近で使い勝手は大きく向上しました。というわけでそろそろ色々まとめておこうという感じ。随時追記します。
 
-WSL 2 の話をするときは [Windows Terminal](https://github.com/microsoft/terminal) の存在がどうしても切っても切れないものになるのですが、話がややこしくなるので本記事の範疇からは外すものとします。~~のちに別記事を書く予定です。~~　書きました。
+WSL 2 の話をするときは [Windows Terminal](https://github.com/microsoft/terminal) の存在がどうしても切っても切れないものになるのですが、話がややこしくなるので本記事の範疇からは外すものとします。~~のちに別記事を書く予定です。~~ →書きました。
 
 [/windows-terminal]
 
