@@ -89,7 +89,7 @@ def get_queryset(self):
 
 split() で分割されたキーワードひとつずつに対して filter() が効いています。Q オブジェクトの引数の値をリストの各要素（ `k` ）に置き換えるのを忘れずに。
 
-で、これをまとめます。
+そして、これをまとめます。
 
 ```python
 def get_queryset(self):

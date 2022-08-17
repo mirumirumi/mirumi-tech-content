@@ -14,7 +14,7 @@ tags : [AWS, Rekognition]
 API リファレンスはこちら。  
 [https://docs.aws.amazon.com/rekognition/latest/dg/API_Reference.html](https://docs.aws.amazon.com/rekognition/latest/dg/API_Reference.html)
 
-ただ実際は各 AWS SDK のリファレンスを見たほうがわかりやすいです。（下記はPython）  
+ただ実際は各 AWS SDK のリファレンスを見たほうがわかりやすいです。（下記は Python）  
 [https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/rekognition.html](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/rekognition.html)
 
 ## detect_labels
