@@ -11,6 +11,6 @@ Electron のバージョン 13.6.9 で確認しました。
 
 [https://www.w3.org/TR/css-align-3/#positional-values]
 
-とはいえ Electron は実質 Chromium そのまんまですし、ブラウザ上で開発しているものと単純な CSS で差分が出るとは思いませんでした。
+とはいえ Electron は実質 Chromium そのまんまだし、ブラウザ上で開発しているものと単純な CSS で差分が出るとは思いませんでした。
 
 今後は普段の CSS でも `flex-end` を使っていくことを意識します。
