@@ -17,8 +17,8 @@ C# や VB で Windows 用デスクトップアプリケーションを作ると�
 ## 環境
 
 - Windows 10 Home 64bit
-- Visual Studio Community 2019 / ver16.4.3
-- .NET Framework / ver4.8.03752（コントロールリストの確認に使ったプロジェクトのターゲットバージョンは 4.7.2）
+- Visual Studio Community 2019, ver16.4.3
+- .NET Framework, ver4.8.03752（コントロールリストの確認に使ったプロジェクトのターゲットバージョンは 4.7.2）
 
 ## .NET(C#/VB) の全コントロール一覧
 
