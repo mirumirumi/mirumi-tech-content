@@ -27,7 +27,7 @@ S3 と CloudFront の各設定、キャッシュ制御、それらの CloudForma
     - 個人のお好みではありますが IaC なしで AWS を使うことは基本的にはない
     - Terraform でも今回とほぼ同じ構成のものを書いたことは何度もあるけど、特に CloudFront は階層構造的に yaml のほうが書きやすくて見やすい印象があった（むしろ CloudFormation でちゃんと書いたのが初めてだったのでこの記事を書いている）
 
-### Nuxt 3 の設定状態（nuxt.config.ts)
+### Nuxt 3 の設定状態（nuxt.config.ts）
 
 基本的には何もしなくても `npm run generate` ってやればいい感じになるので特に細かい設定は不要と思われます。
 
