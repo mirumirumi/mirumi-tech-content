@@ -34,7 +34,7 @@ S3 と CloudFront の各設定、キャッシュ制御、それらの CloudForma
 <div class="box-common box-info">
 <p>自分用メモ、よくわかってないところ：</p>
 
-<p>サイトマップみたいに必要な動的ページのリンクをすべて Nuxt に伝える手段がないときはどうすればいいのか （`nitro.prerender.routes` は SSR と SSG の併用をしたいとき用らしいから関係ない？そもそもそれは `npm run build` するときにしか意味がないもの？）</p>
+<p>サイトマップみたいに必要な動的ページのリンクをすべて Nuxt に伝える手段がないときはどうすればいいのか （nitro.prerender.routes は SSR と SSG の併用をしたいとき用らしいから関係ない？そもそもそれは npm run build するときにしか意味がないもの？）</p>
 
 <p>どなた詳しい方おられましたら教えてください (´｡･ڡ･｡`)</p>
 </div>
@@ -91,7 +91,7 @@ CloudFront には下図のようにデフォルトで index.html を表示して
 <div class="box-common box-info">
 <p>静的ウェブサイトホスティングを使わない場合の S3 + CloudFront のベストプラクティスは「オリジンアクセスアイデンティティのみからのアクセスを許可する」でしたが、つい最近（2022年8月）、新しい発表が AWS からありました。</p>
 
-[https://aws.amazon.com/jp/blogs/news/amazon-cloudfront-introduces-origin-access-control-oac/]
+<p>[https://aws.amazon.com/jp/blogs/news/amazon-cloudfront-introduces-origin-access-control-oac/]</p>
 
 <p>さっと読んだ感じすぐさま対応しなければならないほどのメリットを享受できるケースは多くなく、もっというと今の OAI のままでも別に危険ということはなさそうです。しかし今後の推奨パターンがこの OAC（オリジンアクセスコントロール）になることを考えると、早めに慣れておいたほうがよさそうです。</p>
 </div>
@@ -309,7 +309,7 @@ Resources:
 
 で、その細かなキャッシュ制御の中身はというと、これはちょうど AWS のマネージドキャッシュポリシーがあるのでそれを利用しています。
 
-[https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html]
+[https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html]([https://](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html))
 
 これの「キャッシュしますよ～」と「キャッシュしませんよ～」のやつがちょうどいい数字なので特に何もせずそのまま使えるという感じ。キャッシュするほうは以下のような感じ。
 
