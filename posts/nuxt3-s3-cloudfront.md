@@ -177,7 +177,7 @@ aws cloudfront create-invalidation --distribution-id EXXXXXXXXXXXXX --paths "/*"
 *S3 バケットの設定→ [アクセス許可] タブ。`Condition` によって細かな条件付与を行います。*
 
 ![cloudfront-custom-header](../images/cloudfront-custom-header.png)
-*CloudFront 側は [オリジン] タブの中です。
+*CloudFront 側は [オリジン] タブの中です。*
 
 です。
 
