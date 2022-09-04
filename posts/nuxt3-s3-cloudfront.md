@@ -31,14 +31,13 @@ S3 と CloudFront の各設定、キャッシュ制御、それらの CloudForma
 
 基本的には何もしなくても `npm run generate` ってやればいい感じになるので特に細かい設定は不要と思われます。
 
-:::info
-自分用メモ、よくわかってないところ：
+<div class="box-common box-info">
+<p>自分用メモ、よくわかってないところ：</p>
 
-- サイトマップみたいに必要な動的ページのリンクをすべて Nuxt に伝える手段がないときはどうすればいいのか
-    - `nitro.prerender.routes` は SSR と SSG の併用をしたいとき用らしいから関係ない？そもそもそれは `npm run build` するときにしか意味がないもの？
+<p>サイトマップみたいに必要な動的ページのリンクをすべて Nuxt に伝える手段がないときはどうすればいいのか （`nitro.prerender.routes` は SSR と SSG の併用をしたいとき用らしいから関係ない？そもそもそれは `npm run build` するときにしか意味がないもの？）</p>
 
-どなた詳しい方おられましたら教えてください (´｡･ڡ･｡`)
-:::
+<p>どなた詳しい方おられましたら教えてください (´｡･ڡ･｡`)</p>
+</div>
 
 関係ありそうなところだけ抜粋して掲載します。
 
@@ -62,6 +61,7 @@ export default defineNuxtConfig({
 - HTTP -> HTTPS のリダイレクト
 - URL 末尾の `/` を表示したくない
 - ブラウザキャッシュと CDN キャッシュ（= CloudFront のキャッシュビヘイビア）の適切な設定
+- gzip 圧縮を有効化させる（実際にはほぼ Brotli というさらによいものが使われることになります）
 - S3 のエンドポイントに直接アクセスされたときに弾けるようにする
 
 １つずつ軽い説明 & マネジメントコンソール上でどこの設定に該当するかを紹介します。
@@ -88,13 +88,13 @@ CloudFront には下図のようにデフォルトで index.html を表示して
 
 唯一のデメリットとして S3 のエンドポイントに直接アクセスできるようになってしまうのを自分で塞ぐ必要がありますが、これは IaC を一度書いてしまえばもう忘れていいくらい大したことない設定です。後述します。
 
-:::info
-静的ウェブサイトホスティングを使わない場合の S3 + CloudFront のベストプラクティスは「オリジンアクセスアイデンティティのみからのアクセスを許可する」でしたが、つい最近（）、新しい発表が AWS からありました。
+<div class="box-common box-info">
+<p>静的ウェブサイトホスティングを使わない場合の S3 + CloudFront のベストプラクティスは「オリジンアクセスアイデンティティのみからのアクセスを許可する」でしたが、つい最近（2022年8月）、新しい発表が AWS からありました。</p>
 
 [https://aws.amazon.com/jp/blogs/news/amazon-cloudfront-introduces-origin-access-control-oac/]
 
-さっと読んだ感じすぐさま対応しなければならないほどのメリットを享受できるケースは多くなく、もっというと今の OAI のままでも別に危険ということはなさそうです。しかし今後の推奨パターンがこの OAC（オリジンアクセスコントロール）になることを考えると、早めに慣れておいたほうがよさそうです。
-:::
+<p>さっと読んだ感じすぐさま対応しなければならないほどのメリットを享受できるケースは多くなく、もっというと今の OAI のままでも別に危険ということはなさそうです。しかし今後の推奨パターンがこの OAC（オリジンアクセスコントロール）になることを考えると、早めに慣れておいたほうがよさそうです。</p>
+</div>
 
 ### HTTP -> HTTPS のリダイレクト
 
@@ -132,7 +132,11 @@ Nuxt 向けに気をつけることとして、
 ```bash
 # 既存のリソースを一回クリアする（当然ですがダウンタイム完全ゼロを目指したい硬派な方は違う方法を考える必要があります）
 aws s3 rm s3://my-backet/ --recursive
+
+# キャッシュを効かせるほうのファイル群をアップロード
 aws s3 cp .output/public/_nuxt/ s3://my-backet/_nuxt --recursive --cache-control "max-age=31536000"
+
+# キャッシュを効かせないほうのファイル群をアップロード
 aws s3 cp .output/public/ s3://my-backet/ --recursive --exclude "_nuxt/*" --cache-control "no-cache"
 ```
 
@@ -143,6 +147,18 @@ CloudFront 側はこのあとの CloudFormation の記載でまとめて紹介�
 ```bash
 aws cloudfront create-invalidation --distribution-id EXXXXXXXXXXXXX --paths "/*"
 ```
+
+### gzip 圧縮を有効化させる
+
+配信されるオブジェクトを圧縮させてネットワーク通信量を抑えます。当然ページ表示速度の向上が見込めます。
+
+設定的にはキャッシュビヘイビアの中で設定をたった 1 つ ON にするだけで、CloudFormation 上でも 1 行で書けます。
+
+![cloudfront-object-compression](../images/cloudfront-object-compression.png)
+
+実際には gzip ではなく Brotli というより高圧縮・高速な仕組みが優先されており、例えば Chromium ではデフォルトでこれらの利用を許可するヘッダーが送られているので CloudFront 側も Brotli を優先して実行します。
+
+`content-encoding` に `br` と書いてあれば Brotli での圧縮に成功しています。
 
 ### S3 のエンドポイントに直接アクセスされたときに弾けるようにする
 
