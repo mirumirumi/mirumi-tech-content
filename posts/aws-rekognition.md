@@ -17,7 +17,7 @@ API リファレンスはこちら。
 ただ実際は各 AWS SDK のリファレンスを見たほうがわかりやすいです。（下記は Python）  
 [https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/rekognition.html](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/rekognition.html)
 
-## (detect_labels)
+## detect_labels
 
 今回は一般的な物体認識？といえるであろう `detect_labels` を例に挙げてみます。
 
