@@ -1,5 +1,5 @@
 ---
-title: 非力な Windows PC から 数十GB~ の空き容量を捻出するための不要ファイル一覧
+title: Windows PC から削除していい不要ファイルの一覧 (数十GB~)
 tags : [Windows]
 ---
 
@@ -9,7 +9,7 @@ tags : [Windows]
 
 有用な情報と思われるものがある場合はお気軽にコメントくださいませ（ページ上部の GitHub のリンクをご利用ください!）。
 
-## 消してよいファイル一覧
+## 空き容量を増やすために消していいファイル一覧
 
 <div class="box-common box-info">
 <ul>
