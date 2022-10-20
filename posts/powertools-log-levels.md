@@ -30,7 +30,7 @@ def lambda_handler(event: Event, context: LambdaContext) -> Response:
 
 基本形。
 
-ついでにインポートしている `from aws_lambda_powertools.utilities.typing import LambdaContext` というやつは前述した Typing のひとつで、Lambda の handler に入ってくる第二引数の型付けを行えるものです。context を使うことは正直あまりないけどいつもこれで書いています。
+ついでにインポートしている `from aws_lambda_powertools.utilities.typing import LambdaContext` というやつは前述した Typing のひとつで、Lambda の handler に入ってくる第二引数の型付けを行えるものです。context を使うことは正直あまりないけどいつもちゃんと書いています。
 
 `@logger.inject_lambda_context` のデコレータは、handler に入ってきたイベントを自動的にキャプチャして出力してくれるものです（なのでこの場合は関数 1 行目にあるログ出力は実際にはいらない）。デコレータの引数に色々便利機能があるのでこれもとりあえずいつも書いておくレベルでいいと思います。
 
