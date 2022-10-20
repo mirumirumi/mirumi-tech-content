@@ -1,6 +1,6 @@
 ---
 title: Lambda Powertools のログレベルまとめ
-tags : [AWS, Lambda, ログ]
+tags : [AWS, Lambda, Log]
 ---
 
 Lambda + Python の開発時には必ず使いたい [AWS Lambda Powertools for Python](https://awslabs.github.io/aws-lambda-powertools-python/latest/) のロガーについて調べたまとめ。
