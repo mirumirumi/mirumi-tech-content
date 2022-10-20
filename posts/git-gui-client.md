@@ -1,6 +1,6 @@
 ---
 title: Git の GUI クライアントを使ってみた比較：SourceTree/Fork/GitKraken
-tags : [Git, ツール]
+tags : [Git, Tool]
 ---
 
 Git の GUI クライアントにはずっと SourceTree を使っていましたが、Windows 版で見過ごせないひどい有様があらわになったのを見て、よさそうなのを他に２つ試してみた記録です。
