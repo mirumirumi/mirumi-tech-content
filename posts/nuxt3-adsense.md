@@ -50,14 +50,14 @@ onMounted(() => {
 
 遭遇することになるエラーは主に
 
-- `adsbygoogle.push() error: All ins elements in the … with class=adsbygoogle already have ads in them.`
-- `adsbygoogle is not defined`
+- adsbygoogle.push() error: All ins elements in the … with class=adsbygoogle already have ads in them.
+- adsbygoogle is not defined
 
 などかと思われます。
 
 前提として、
 
-- `https://pagead2.googlesyndication.com〜` のメインスクリプトはページで 1 度だけ読み込まれていればよい
+- 「https://pagead2.googlesyndication.com〜」のメインスクリプトはページで 1 度だけ読み込まれていればよい
     - async で問題ないので読み込みタイミングを気にする必要はない
 - 広告タグになる `<ins>` の部分と `(adsbygoogle = window.adsbygoogle || []).push({});` は広告ユニットごとの数ぶん存在していないとダメで、かつ両者の数値（実行回数）が一致している必要がある
 
@@ -73,7 +73,7 @@ onMounted(() => {
 
 試したパターンは、下記それぞれの要素を組み合わせたものという感じになります。
 
-- `https://pagead2.googlesyndication.com〜` のメインスクリプトの読み込み方
+- 「https://pagead2.googlesyndication.com〜」のメインスクリプトの読み込み方
     - `Head` タグを使うかどうか
     - async/defer/none のどれか（これはどれでも問題ないことがわかっているので async か defer を選ぶことをおすすめします）
     - 広告を表示したいコンポーネントに書くか app.vue に書くか
