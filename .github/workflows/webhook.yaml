@@ -32,4 +32,4 @@ jobs:
       - name: regenerate static site
         # if: ${{ github.ref == 'refs/heads/main' }}
         run: |
-          curl -X POST -H "Accept: application/vnd.github.v3+json" -H "Authorization: token ${{ secrets.PAT }}" -d '{"ref": "release/prd"}' https://api.github.com/repos/mirumirumi/mirumi-tech-frontend/actions/workflows/deploy.yaml/dispatches
+          curl -X POST -H "Accept: application/vnd.github.v3+json" -H "Authorization: token ${{ secrets.PAT }}" -d '{"ref": "release/prd"}' https://api.github.com/repos/mirumirumi/mirumi-tech/actions/workflows/deploy.yaml/dispatches
