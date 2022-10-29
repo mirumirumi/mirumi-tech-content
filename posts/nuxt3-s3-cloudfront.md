@@ -261,7 +261,7 @@ Resources:
               OriginProtocolPolicy: http-only
             OriginCustomHeaders:
               - HeaderName: Referer
-                HeaderValue: xxxxxxxxxxx  # 特定のカスタムヘッダー（推測されなければ何でもいい）
+                HeaderValue: xxxxxxxxxxxx  # 特定のカスタムヘッダー（推測されなければ何でもいい）
         Restrictions:
           GeoRestriction: 
             RestrictionType: none
