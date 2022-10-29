@@ -310,7 +310,7 @@ Resources:
 
 で、その細かなキャッシュ制御の中身はというと、これはちょうど AWS のマネージドキャッシュポリシーがあるのでそれを利用しています。
 
-[https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html]([https://](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html))
+[https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html]
 
 これの「キャッシュしますよ～」と「キャッシュしませんよ～」のやつがちょうどいい数字なので特に何もせずそのまま使えるという感じ。キャッシュするほうは以下のような感じ。
 
