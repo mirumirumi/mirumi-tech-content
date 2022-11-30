@@ -9,7 +9,7 @@ S3 と CloudFront の各設定、キャッシュ制御、それらの CloudForma
 
 ちなみに本サイト（mirumi.tech）も今回取り上げる構成で作られています。気になる方は下記の記事もご覧ください。
 
-[https://mirumi.tech/this]
+[/this]
 
 ## 使うもの、環境など
 
