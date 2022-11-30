@@ -144,7 +144,7 @@ require("unplugin-vue-components/webpack")({
 
 もうオートインポートされてます。以上。
 
-## QA
+## Q&A
 
 ### インポートしたコンポーネントが template タグ内でシンタックスハイライトされないんだけど？
 
