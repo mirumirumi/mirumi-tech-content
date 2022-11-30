@@ -7,6 +7,10 @@ Nuxt 3 で SSG したビルド成果物を AWS に IaC でデプロイするま�
 
 S3 と CloudFront の各設定、キャッシュ制御、それらの CloudFormation 上での記載方法などが主な内容です。
 
+ちなみに本サイト（mirumi.tech）も今回取り上げる構成で作られています。気になる方は下記の記事もご覧ください。
+
+[https://mirumi.tech/this]
+
 ## 使うもの、環境など
 
 - Nuxt@3.0.0-rc.6 ~ 8
