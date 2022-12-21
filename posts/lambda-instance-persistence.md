@@ -21,7 +21,7 @@ Lambda のスケーリングはコンピューティングリソースベース�
 
 どうやって Lambda が前と同じインスタンスを使用しているかどうかを調べるかですが、だいたい下記のようなものが根拠になると思います：
 
-- Lambda の `cold_start` が true/false のどちらだったか CloudWatch Logs から確認する
+- Lambda の `cold_start` が true/false のどちらだったか CloudWatch Logs から確認する（[AWS Lambda Powertools for Python](https://awslabs.github.io/aws-lambda-powertools-python/latest) の `logger.inject_lambda_context` を使うと確認できる）
 - CloudWatch Logs のログストリームが分離しているかどうか確認する
 
 というわけで、実験の手順は以下のようになりました。
