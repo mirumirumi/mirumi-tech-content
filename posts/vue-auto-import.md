@@ -43,10 +43,10 @@ Vite, Webpack, Vue CLI, Rollup, esbuild などに対応していて（これは�
 ## 導入方法
 
 ```bash
-npm i unplugin-auto-import unplugin-vue-components
+npm i unplugin-auto-import unplugin-vue-components --save-dev
 ```
 
-でインストールしたら、vue.config.js に設定を書きます。
+でインストールしたら、vue.config.js や vite.config.ts などに設定を書きます。それぞれのビルドツールごとの詳細もリポジトリに記載がありますのでそちらをどうぞ。
 
 ```js
 module.exports = {
