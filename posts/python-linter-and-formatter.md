@@ -171,10 +171,10 @@ var4: Union[int, str] = "123"
 それと、型を使って Python を書いていく上で（多くのケースで）他に必要になるものがあるのでこれも一緒にインポートしておきます。
 
 ```python
-from typing import Any, Cast, Literal, TypedDict
+from typing import Any, cast, Literal
 ```
 
-僕はいつもこの 3~4 つあたりはファイル先頭に `from __future__ import annotations` と一緒に書いちゃいます。いくつかはこの次で紹介します。
+僕はいつもこの 3 つあたりはファイル先頭に `from __future__ import annotations` と一緒に書いちゃいます。いくつかはこの次で紹介します。
 
 #### ジェネリクス（複合型）
 
