@@ -34,10 +34,10 @@ tags : [Nuxt 3, AWS, SAM, Terraform]
 
 [https://github.com/mirumirumi/aws-common-infrastructures]
 
-継続的に自分が自分のブログで記事を書き続けていくためには徹底的な「仕組み化 for me」が必要だと感じ、まずは
+継続的に自分が自分のブログで記事を書き続けていくためには徹底的な仕組み化が必要だと感じ、まずは
 
 - WordPress からの脱却
-- 記事の管理を Git に委ねたい
+- 記事の管理を Git に委ねたい（これは特に技術ブログでの話ですが）
 
 あたりが大きな目標になっていました。
 
