@@ -372,17 +372,23 @@ actions: {
 
 ```js
 store.$subscribe(() => {
-  // you want to do after the store is updated
+  // You want to do after the store is updated
 })
 ```
 
-公式ドキュメントに記載がされてからもまだ日が浅く正直よくわかっていないところが多いのですが、とりあえずこれでストアの変更を検知することはできます。
+公式ドキュメントに記載がされてからもまだ日が浅く正直よくわかっていないところが多いのですが、とりあえずこれでストアの変更を検知することはできます。  
+後日 (2023/1/27) 追記：説明は特に変わっていないことを確認しました。
 
-第二引数に state が入ってくるのでそれを使うことも可能です（第一引数は mutation という独自オブジェクトなのですが中身を見る限り特に用事がなく実用性が不明です…）。
+第二引数に state が入ってくるのでそれを使うことも可能です<del>（第一引数は mutation という独自オブジェクトなのですが中身を見る限り特に用事がなく実用性が不明です…）</del>。  
+後日 (2023/1/27) 追記：mutation オブジェクト内の説明が追加されていたため下記のサンプルコード内にも追記しました。
 
 ```js
 store.$subscribe((mutation, state) => {
   console.log(state)  // 変更後の state オブジェクト全体
+
+  mutation.type     // "direct" | "patch object" | "patch function"
+  mutation.storeId  // "counter", "session" とかのやつ
+  mutation.payload  // patch object 本体 (type が patch object だった場合にのみ)
 })
 ```
 
@@ -393,16 +399,26 @@ watch(
   pinia.state,
   (state) => {
     // persist the whole state to the local storage whenever it changes
-    localStorage.setItem('piniaState', JSON.stringify(state))
+    localStorage.setItem("piniaState", JSON.stringify(state))
   },
   { deep: true }
 )
-
 ```
 
 「 `watch`  よりも `$subscribe` を使う利点は、サブスクリプションがパッチの後に一度だけ起動することです」ということで、おそらくパフォーマンス上の理由から後者に優位性があるのではという浅い理解をしています。
 
-Vue コンポーネントのように変更前後の値をそれぞれ取得できたらとても嬉しいなと思うのですが、今のところそのような機能は両者ともないようです。
+しかし Vue の `watch` が使えるということは、ストア内の特定の状態のみに着目して監視することが可能ということにもなると思います。
+
+```js
+watch(
+  () => pinia.state.count,
+  (newValue) => {
+    console.log(newValue)  // 更新されたあとのカウント
+  },
+)
+```
+
+Vue コンポーネントのように変更前後の値をそれぞれ取得したい場合、現在のところ Pinia 純正にはそのような機能はなさそうです。上記のように watch を使うのが代替手段になるでしょうか。
 
 ### コンポーネントの外（main.tsなど）でストアを使う
 
@@ -456,26 +472,6 @@ router.beforeEach((to) => {
 分かり次第追記します。
 
 ## よくわかっていないところ
-
-### 状態監視するときの 2 つの記法
-
-上でも書いたように、 `$subscribe` と `watch` の使い分け、および前者の詳しい挙動がよくわかっていません。
-
-ガイドを見る限り `watch` のほうはオプショナル的な位置づけに見えるのですが、そうなると deep オプションは…？とか色々疑問がわきます（ディープコピーまわりは危険度が高いのでそもそも使わないようにしていたゆえに必要性はあまり感じていないですが）。
-
-### 特定の state のみを監視する方法
-
-普通に考えたら「監視対象と全然関係ないときにも `$subscribe` メソッドが毎度動いてしまう」というのは危険極まりないです。
-
-```js
-store.$subscribe(() => {
-  // ここに書く処理の副作用をとても気にしないといけない
-})
-```
-
-しかし、監視しているのは上記のようにストア全体ということになっています。
-
-あまりストアを多用した実装を行ったことがなかったのでつい最近気がついたのですが、「こんなはずなくない…？？」となっていてまだ自分が何かを知らないだけの可能性がかなりあります。そういえば Vuex 時代でも watch は雰囲気で使っていたなと…。
 
 ### ストアのネスト
 
