@@ -5,7 +5,7 @@ tags : [AWS, Lambda]
 
 Lambda の共有テストイベント（関数ごとに 10 個までの制限があるほうではなく環境全体で共有できるやつ）を作成して保存するとき、謎の「Malformed request.」というエラーがひたすら出まくってどうしようもないときの解決法。
 
-どうしても解決したかったので Lambda のテストイベントについて低レベルなリファレンスを読んでみようということで、とりあえず [このページ](https://docs.aws.amazon.com/ja_jp/lambda/latest/dg/testing-functions.html#creating-shareable-events) を漁っていたところ、
+どうしても解決したかったので Lambda のテストイベントについてなんでもいいからリファレンスを読んでみようということで、とりあえず [このページ](https://docs.aws.amazon.com/ja_jp/lambda/latest/dg/testing-functions.html#creating-shareable-events) を漁っていたところ、
 
 > Lambda は、共有可能なテストイベントをスキーマとして lambda-testevent-schemas という名前の Amazon EventBridge (CloudWatch Events) スキーマレジストリに保存します
 
