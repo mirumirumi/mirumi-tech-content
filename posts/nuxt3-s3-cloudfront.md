@@ -154,7 +154,7 @@ aws cloudfront create-invalidation --distribution-id EXXXXXXXXXXXXX --paths "/*"
 
 実際には gzip ではなく Brotli というより高圧縮・高速な仕組みが優先されており、例えば Chromium ではデフォルトでこれらの利用を許可するヘッダーが送られているので CloudFront 側も Brotli を優先して実行します。
 
-`content-encoding` に `br` と書いてあれば Brotli での圧縮に成功しています。
+レスポンスのヘッダーに `content-encoding: br` があれば Brotli での圧縮に成功しています。
 
 ### S3 のエンドポイントに直接アクセスされたときに弾けるようにする
 
