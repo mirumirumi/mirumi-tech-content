@@ -19,6 +19,6 @@ ManifestDPIAware true
 
 この 1 行を書いて保存しておくだけで、ビルド時に勝手に反応し対応がなされます。
 
-<p><img src="https://mirumi.me/tech/wp-content/uploads/electron-builder-installer.png" alt="electron-builder-installer" class="win11_ss" /></p>
+<p style="text-align: center;">※ここに綺麗なインストーラー画面のスクショを掲載していたのですが、不慮の事故により画像を紛失しました…</p>
 
 できあがったインストーラー画面はちゃんとクッキリしており、アプリアイコンもジャギーさから解放されました🎉
