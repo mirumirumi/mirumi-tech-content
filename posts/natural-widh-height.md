@@ -8,7 +8,7 @@ HTML 上から画像を指定してサイズを取得するとき、
 
 ```js
 const imgSize = {
-    width: document.getElementById("photo").width,
+    width: document.getElementById("photo").width, 
     height: document.getElementById("photo").height,
 }
 ```
