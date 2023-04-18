@@ -1,7 +1,6 @@
 ---
 title: naturalWidth/Height で要素のレンダリングサイズではなく画像の実寸サイズを取得する
 tags : [JavaScript, DOM]
-publish: false
 ---
 
 HTML 上から画像を指定してサイズを取得するとき、

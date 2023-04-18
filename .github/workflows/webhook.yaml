@@ -26,8 +26,8 @@ jobs:
       - name: Request to insert content into DB
         run: |
           curl -X POST -H "Content-Type: application/json" -H "Authorization: ${{ secrets.API_KEY_DEV }}" -d "${{ steps.changed-files.outputs.all_changed_files }}" https://8dwl70rs19.execute-api.ap-northeast-1.amazonaws.com/mirumitech-dev-for-python-apis/insert-content-webhook
-      #     curl -X POST -H "Content-Type: application/json" -H "Authorization: ${{ secrets.API_KEY_PRD }}" -d "${{ steps.changed-files.outputs.all_changed_files }}" https://s9ubhi41m7.execute-api.ap-northeast-1.amazonaws.com/mirumitech-prd-for-python-apis/insert-content-webhook
+          curl -X POST -H "Content-Type: application/json" -H "Authorization: ${{ secrets.API_KEY_PRD }}" -d "${{ steps.changed-files.outputs.all_changed_files }}" https://bfcfwmknxb.execute-api.ap-northeast-1.amazonaws.com/mirumitech-prd-for-python-apis/insert-content-webhook
 
-      # - name: Regenerate static site
-      #   run: |
-      #     curl -X POST -H "Accept: application/vnd.github.v3+json" -H "Authorization: token ${{ secrets.PAT }}" -d '{"ref": "release/prd"}' https://api.github.com/repos/mirumirumi/mirumi-tech/actions/workflows/deploy.yaml/dispatches
+      - name: Regenerate static site
+        run: |
+          curl -X POST -H "Accept: application/vnd.github.v3+json" -H "Authorization: token ${{ secrets.PAT }}" -d '{"ref": "release/prd"}' https://api.github.com/repos/mirumirumi/mirumi-tech/actions/workflows/deploy.yaml/dispatches
