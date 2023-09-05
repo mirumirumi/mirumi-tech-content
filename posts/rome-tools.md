@@ -37,13 +37,13 @@ VS Code の拡張を使う前提で書きます。
 
 拡張のインストールと npm パッケージとしての rome のインストールを終えたら、プロジェクトのルートに rome.json を作成します。
 
-<div class="box-common box-info">
-<p>rome のインストールは devDependencies で問題ありません：</p>
+:::info
+rome のインストールは devDependencies で問題ありません：
 
 ```sh
 npm i rome --save-dev
 ```
-</div>
+:::
 
 rome.json はなにも書かなければすべてデフォルトの状態のまま使用するとみなされ、特に何も起きません。ファイルが存在しない場合も同様です。VS Code で使う場合は VS Code 側の設定としてコンフィグを書くことも可能ですが、これはリポジトリに含めるほうがいいでしょう。従来のツールもほぼすべて同様の運用だったと思いますし（ただしファイルは rome.json たったひとつでいいのです！！）。
 
