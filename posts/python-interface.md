@@ -48,7 +48,9 @@ from typing_extensions import TypedDict
 PyPl の [このページ](https://pypi.org/project/typing-extensions/) を見ればわかりますが、Python は 3.6 近辺以降で型に関するアップデートが急増しています（作者が積極的に Python に型による堅牢性を導入しようとしているとのこと）。そのほとんどの機能が `typing-extensions` ではサポートされています。
 
 :::info
+
 後方互換性がどのバージョンまで保たれているかは明記がないのですが、それは「しばらくすると少しずつこれらの機能は廃止されていきます」という説明からも動的であることが理由のように思えます。
+
 :::
 
 ### つかいかた
