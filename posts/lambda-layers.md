@@ -64,7 +64,7 @@ Lambda 同士で共通の処理を切り出せる [Lambda Layers](https://docs.a
 
 外部モジュールを使用するとき、各デプロイパッケージ内の requirements.txt に書くのではなくインポート用だけのレイヤーを作るといいよ、という記事を書きました。これは AWS も推奨しているソリューションのようです。
 
-[/lambda-layers-import]
+[/lambda-layers-import/]
 
 ## （さらに追記）
 
