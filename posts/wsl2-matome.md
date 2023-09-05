@@ -9,7 +9,7 @@ tags : [WSL 2, Windows]
 
 WSL 2 の話をするときは [Windows Terminal](https://github.com/microsoft/terminal) の存在がどうしても切っても切れないものになるのですが、話がややこしくなるので本記事の範疇からは外すものとします。~~のちに別記事を書く予定です。~~ →書きました。
 
-[/windows-terminal]
+[/windows-terminal/]
 
 ## 良いところ
 
